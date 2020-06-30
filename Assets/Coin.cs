@@ -12,4 +12,10 @@ public class Coin : MonoBehaviour
         transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles + new Vector3(0f, rotationSpeed * Time.deltaTime, 0f));
 
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Destroy(this.gameObject);
+
+    }
 }
